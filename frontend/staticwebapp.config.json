@@ -9,20 +9,20 @@
             "allowedRoles": [ "authenticated" ]
         }
     ],
-    "auth": {
-        "rolesSource": "/api/GetRoles",
-        "identityProviders": {
-            "azureActiveDirectory": {
-                "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
-                "registration": {
-                    "openIdIssuer": "https://login.microsoftonline.com/<YOUR_AAD_TENANT_ID>",
-                    "clientIdSettingName": "AAD_CLIENT_ID",
-                    "clientSecretSettingName": "AAD_CLIENT_SECRET"
-                },
-                "login": {
-                    "loginParameters": [
-                        "resource=https://graph.microsoft.com"
-                    ]
+   "auth": {
+  "rolesSource": "/api/GetRoles",
+  "identityProviders": {
+    "azureActiveDirectory": {
+      "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+      "registration": {
+        "openIdIssuer": "https://login.microsoftonline.com/9f5ee907-c340-4d5a-8195-2ed62356934b",
+        "clientIdSettingName": "ENTRA_CLIENT_ID",
+        "clientSecretSettingName": "ENTRA_CLIENT_SECRET"
+      },
+      "login": {
+        "loginParameters": [
+          "resource=https://graph.microsoft.com"
+        ]
                 }
             }
         }
